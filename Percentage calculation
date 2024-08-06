@@ -1,0 +1,40 @@
+#include<stdio.h>
+//Discount 
+
+int main()
+{
+    float pa, damt;
+    int membership;
+    printf("Do you have membership:\n1.Yes\n2.No\n");
+    scanf("%d",&membership);
+    printf("\nEnter Processed Amount: ");
+    scanf("%f", &pa);
+    
+    if (membership == 1)
+    {
+        if (pa>=2500)
+        {
+            damt = pa * 15 / 100;
+            printf("You get 15%% discount: %.2f\n", damt);
+            printf("Total Amount after 15%% discount: %.2f", pa - damt);
+        }
+        else
+        {
+            damt = pa * 8 / 100;
+            printf("You get 8%% discount: %.2f\n", damt);
+            printf("Total amount after 8%% discount: %.2f",pa- damt);
+        }
+    }
+    if (membership == 2)
+    {
+        if (pa >= 3000)
+        {
+            damt = pa * 5 / 100;
+            printf("You get 5%% discount: %.2f\n", damt);
+            printf("Total Amount after 5%% discount: %.2f",pa- damt);
+        }
+        
+        else printf("You aren't elligible for any discount\nAmount to pay: %.2f", pa);
+        
+    }
+}
